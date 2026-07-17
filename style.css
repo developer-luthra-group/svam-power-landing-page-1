@@ -1,6 +1,4 @@
-/* ==============================
-           CSS VARIABLES & RESET
-        ============================== */
+
 :root {
   --brand-blue: #0f2942;
   --action-red: #d11212;
@@ -446,7 +444,7 @@ img {
 /* ==============================
            TESTIMONIAL
         ============================== */
-.testimonial .c-quote{
+.testimonial .c-quote {
   /* border-bottom: 1px solid var(--border-color); */
   /* text-align: center; */
 }
@@ -462,16 +460,20 @@ img {
   border-left: 5px solid var(--action-red);
   border-radius: 0 10px 10px 0;
 }
-.quote p.c-quote{
-    font-style: italic;
+
+.quote p.c-quote {
+  font-style: italic;
 }
-p.c-name{
-  font-size:16px;
+
+p.c-name {
+  font-size: 16px;
   margin-top: 10px;
 }
-p.c-role{
-  font-size:14px;
+
+p.c-role {
+  font-size: 14px;
 }
+
 /* ==============================
            FAQ
         ============================== */
@@ -745,11 +747,11 @@ p.c-role{
 
 .form-control {
   width: 100%;
-  padding: 8px 10px;
+  padding: 7px 8px;
   border-radius: 6px;
   border: 1px solid #d7dde8;
   transition: 0.3s;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .form-control:focus {
@@ -1327,7 +1329,8 @@ section.final-cta {
 
 /* Individual Slide Cards */
 .ind-slide-card {
-  width: 100%; /* Keeps Swiper layout correct */
+  width: 100%;
+  /* Keeps Swiper layout correct */
   height: 180px;
   border-radius: 12px;
   background-size: cover;
@@ -1345,8 +1348,8 @@ section.final-cta {
   width: 100%;
   height: 100%;
   /* Dark tint so white text is highly visible */
-  background: rgba(0, 0, 0, 0.4); 
-  
+  background: rgba(0, 0, 0, 0.4);
+
   /* THIS CONTROLS THE BLUR: Change 4px to your liking */
   /* backdrop-filter: blur(1px);  */
   /* -webkit-backdrop-filter: blur(4px); Safari support */
@@ -1397,6 +1400,10 @@ section.final-cta {
   }
 }
 
+img.kirloskar-logo {
+  width: 140px;
+}
+
 @media (max-width:500px) {
 
   .swiper-button-next,
@@ -1413,16 +1420,27 @@ section.final-cta {
   }
 
   .footer-grid {
-    gap: 20px;
+    row-gap: 20px;
+    column-gap: 5px;
   }
+
   footer {
     padding: 30px 0 20px;
   }
-  .wrap{
+
+  .wrap {
     padding: 0 15px;
   }
-  footer h4{
+
+  footer h4 {
     margin-bottom: 10px;
+  }
+
+  .why-choose-section {
+    padding: 40px 0 !important;  }
+
+  .why-choose-header {
+    margin-bottom: 30px !important;
   }
 }
 
@@ -1484,7 +1502,7 @@ section.final-cta {
 
 /* Section Main Canvas Background Wrapper */
 .why-choose-section {
-  background-color: #0b1a24; 
+  background-color: #0b1a24;
   padding: 80px 0;
   font-family: system-ui, -apple-system, sans-serif;
   color: #ffffff;
@@ -1502,7 +1520,7 @@ section.final-cta {
 }
 
 .sub-badge {
-  color: #00d2c4; 
+  color: #00d2c4;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -1518,7 +1536,8 @@ section.final-cta {
 /* Two-column layout grid structure */
 .why-choose-grid {
   display: flex;
-  align-items: stretch; /* Forces equal height columns */
+  align-items: stretch;
+  /* Forces equal height columns */
   justify-content: space-between;
   gap: 60px;
 }
@@ -1544,7 +1563,7 @@ section.final-cta {
 }
 
 .check-icon {
-  color: #00d2c4; 
+  color: #00d2c4;
   margin-right: 14px;
   font-weight: bold;
 }
@@ -1559,7 +1578,7 @@ section.final-cta {
 /* Solid Orange CTA Button Settings */
 .quote-btn {
   display: inline-block;
-  background-color: #f59e0b; 
+  background-color: #f59e0b;
   color: #0b1a24;
   text-decoration: none;
   padding: 14px 36px;
@@ -1664,7 +1683,7 @@ section.final-cta {
     flex-direction: column;
     gap: 40px;
   }
-  
+
   .premium-feature-card {
     min-height: 350px;
   }
@@ -1672,4 +1691,63 @@ section.final-cta {
   .main-title {
     font-size: 28px;
   }
+}
+
+
+.success-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 99999;
+}
+
+.success-popup {
+    width: 90%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,.25);
+    animation: popupScale .25s ease;
+}
+
+.success-popup h4{
+    margin-top:15px;
+    font-size:24px;
+}
+
+.success-popup p{
+    margin:15px 0 25px;
+    color:#666;
+    line-height:1.6;
+}
+
+.success-popup .tick{
+    width:70px;
+    height:70px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#0b8f87;
+    color:#fff;
+    font-size:34px;
+}
+
+@keyframes popupScale{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
 }
